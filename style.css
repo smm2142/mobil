@@ -28,21 +28,22 @@ body {
   font-weight: bold;
 }
 
-#comboText {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 32px;
-  color: #ff4081;
-  font-weight: bold;
+#endScreen {
   display: none;
-  animation: pop 1s ease-out;
-  z-index: 10;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-@keyframes pop {
-  0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
-  50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
-  100% { transform: translate(-50%, -50%) scale(1); opacity: 0; }
+#endScreen img {
+  width: 300px;
+  border-radius: 15px;
+}
+
+#endScreen p {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
 }
