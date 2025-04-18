@@ -163,12 +163,19 @@ canvas.addEventListener("touchstart", (e) => {
   }
 });
 
-// Oyun sonu (1 dəq 30 saniyə sonra)
-setTimeout(() => {
-  gameEnded = true;
-  gameContainer.style.display = "none";
-  endScreen.style.display = "flex";
-}, 90000); // 90 saniyə
+function updateScore() {
+  scoreEl.textContent = score + " ❤️";
+
+  if (score >= 10) player.upgrade = true;
+  if (score >= 25) bulletSpeed = 8;
+
+  if (score >= 100 && !gameEnded) {
+    gameEnded = true;
+    gameContainer.style.display = "none";
+    endScreen.style.display = "flex";
+  }
+}
+
 
 setInterval(spawnHeart, 2000);
 setInterval(spawnEnemy, 3000);
