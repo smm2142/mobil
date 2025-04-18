@@ -1,9 +1,4 @@
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
+
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 const scoreEl = document.getElementById("score");
@@ -22,6 +17,12 @@ let score = 0;
 let bulletSpeed = 5;
 let gameEnded = false;
 
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
 function drawHeart(x, y) {
   ctx.fillStyle = "red";
   ctx.beginPath();
