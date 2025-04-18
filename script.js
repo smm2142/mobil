@@ -7,7 +7,14 @@ const startBtn = document.getElementById("startBtn");
 const gameContainer = document.getElementById("gameContainer");
 const endScreen = document.getElementById("endScreen");
 
-let player = { x: canvas.width / 2 - 15, y: canvas.height - 60, width: 30, height: 30, upgrade: false };
+let player = {
+  x: window.innerWidth / 2 - 15,
+  y: window.innerHeight - 60, // bu dəyişəcək yenə də
+  width: 30,
+  height: 30,
+  upgrade: false
+};
+
 let hearts = [];
 let enemies = [];
 let fastEnemies = [];
@@ -20,6 +27,7 @@ let gameEnded = false;
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+  player.y = canvas.height - player.height - 30;
 }
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
