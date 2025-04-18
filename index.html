@@ -3,18 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mobil ucun deneme</title>
+  <title>Qəlb Topla</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="startScreen">
+    <h1>Qaydalar</h1>
+    <ul>
+      <li>❤️ Ürəyə vur → +1 xal</li>
+      <li>🖤 Qara düşmənə vur → -1 xal</li>
+      <li>💨 Mavi düşmənə vur → +1 xal</li>
+      <li>🚀 Raketə vur → +3 xal</li>
+      <li>30 xal yığsan oyun bitir 😎</li>
+    </ul>
+    <button id="startBtn">Oyuna Başla</button>
+  </div>
+
   <div id="gameContainer">
     <canvas id="gameCanvas" width="360" height="640"></canvas>
     <div id="score">0 ❤️</div>
   </div>
+
   <div id="endScreen">
-    <img src="son.jpg" alt="Son şəkli" />
-    <p>heh, oynadin qutardin, noldu?😁</p>
+    <img src="son.png" alt="Son şəkli" />
+    <p>heh, oynadin qutardin, noldu?</p>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
